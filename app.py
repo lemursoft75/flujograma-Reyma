@@ -1,8 +1,20 @@
 from flask import Flask, render_template, request, redirect
 import json, os
 from datetime import datetime
+import webbrowser
+import threading
+import sys
 
-app = Flask(__name__)
+def open_browser():
+    webbrowser.open_new("http://127.0.0.1:5000")
+
+
+if getattr(sys, 'frozen', False):
+    base_path = sys._MEIPASS
+else:
+    base_path = os.path.abspath(".")
+app = Flask(__name__, template_folder=os.path.join(base_path, "templates"), static_folder=os.path.join(base_path, "static"))
+
 ARCHIVO_JSON = "clientes.json"
 
 ESTADOS = ["cotizar", "aprobar", "liberar", "embarcar", "notificar", "facturar", "finalizado"]
@@ -60,4 +72,8 @@ def editar(nombre):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    if getattr(sys, 'frozen', False):
+        threading.Timer(1, open_browser).start()
+        app.run(host='127.0.0.1', port=5000, debug=False)
+    else:
+        app.run(debug=True)
