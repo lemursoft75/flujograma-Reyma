@@ -1,0 +1,50 @@
+{
+    "PLASTICUN": {
+        "estado": 5,
+        "fecha": "2025-06-27",
+        "pedido": "2573129",
+        "comentarios": "TR para entrega lunes 7 AM"
+    },
+    "EDCE": {
+        "estado": 5,
+        "fecha": "2025-06-27",
+        "pedido": "2572485",
+        "comentarios": "TR Kantunilkin entrega lunes 7 AM"
+    },
+    "EDCE2": {
+        "estado": 5,
+        "fecha": "2025-06-27",
+        "pedido": "2574351",
+        "comentarios": "TR CEDIS lunes 7 AM"
+    },
+    "EDCE3": {
+        "estado": 4,
+        "fecha": "2025-06-27",
+        "pedido": "2574351",
+        "comentarios": "TORTON CEDIS lunes 7 AM"
+    },
+    "ABARROTES VAZQUEZ": {
+        "estado": 5,
+        "fecha": "2025-06-27",
+        "pedido": "2573641",
+        "comentarios": "TR LUNES 7 AM"
+    },
+    "PLASTISARO": {
+        "estado": 5,
+        "fecha": "2025-06-27",
+        "pedido": "2573676",
+        "comentarios": "TORTON  27-06-25 3 PM"
+    },
+    "PLASTISARO2": {
+        "estado": 1,
+        "fecha": "2025-06-27",
+        "pedido": "2574276",
+        "comentarios": "TR LUNES 3 PM"
+    },
+    "EMMA LETICIA": {
+        "estado": 2,
+        "fecha": "2025-06-27",
+        "pedido": "2573589",
+        "comentarios": "TR LUNES 7 AM"
+    }
+}
