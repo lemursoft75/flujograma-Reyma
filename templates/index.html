@@ -28,6 +28,7 @@
           <th>Progreso</th>
           <th>Acciones</th>
           <th>Comentarios</th>
+          <th>Última Entrega</th>
         </tr>
       </thead>
       <tbody>
@@ -52,11 +53,12 @@
           {% set fecha = data["fecha"] if data["fecha"] is defined else '' %}
           {% set pedido = data["pedido"] if data["pedido"] is defined else '' %}
           {% set comentarios = data["comentarios"] if data["comentarios"] is defined else '' %}
+          {% set ultima_entrega = data["ultima_entrega"] if data["ultima_entrega"] is defined else '' %}
           {% set estado_actual = estados[indice] %}
           {% set porcentaje = (indice * 100) // total_estados %}
 
-          <tr>
-            <form method="post" action="/editar/{{ nombre }}">
+          <form method="post" action="/editar/{{ nombre }}">
+            <tr>
               <td>{{ nombre }}</td>
               <td>
                 <input name="pedido" class="form-control form-control-sm" value="{{ pedido }}" placeholder="No de Pedido">
@@ -95,13 +97,16 @@
                 </a>
               </td>
               <td>
+                <input name="comentarios" class="form-control form-control-sm" value="{{ comentarios }}" placeholder="Comentarios">
+              </td>
+              <td>
                 <div class="input-group input-group-sm">
-                  <input name="comentarios" class="form-control" value="{{ comentarios }}" placeholder="Comentarios">
+                  <input name="ultima_entrega" type="date" class="form-control" value="{{ ultima_entrega }}">
                   <button type="submit" class="btn btn-success btn-sm">Guardar</button>
                 </div>
               </td>
-            </form>
-          </tr>
+            </tr>
+          </form>
         {% endfor %}
       </tbody>
     </table>
